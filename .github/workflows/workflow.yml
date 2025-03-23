@@ -6,9 +6,9 @@ on:
             description: 'Debe funcionar correctamente?'
             type: choice
             options:
-              - SI
-              - NO
-            default: SI
+              - "SI"
+              - "NO"
+            default: "SI"
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -28,9 +28,10 @@ jobs:
               id: set_output
               run: |
                 if [[ "${{ inputs.result }}" == "SI" ]]; then
-                echo "build_status=success" >> $GITHUB_OUTPUT
+                  echo "build_status=success" >> $GITHUB_OUTPUT
                 else
-                echo "build_status=fail" >> $GITHUB_OUTPUT
+                  echo "build_status=fail" >> $GITHUB_OUTPUT
+                fi
               
 
     deploy:
