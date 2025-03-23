@@ -2,13 +2,13 @@ name: Workflow Execution
 on: 
     workflow_dispatch:
         inputs:
-            result:
-                description: 'Debe funcionar correctamente?'
-                type: choice
-                options:
-                    - SI
-                    - NO
-                default: SI
+          result:
+            description: 'Debe funcionar correctamente?'
+            type: choice
+            options:
+              - "SI"
+              - "NO"
+            default: "SI"
 jobs:
     build:
         runs-on: ubuntu-latest
