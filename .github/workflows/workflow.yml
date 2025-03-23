@@ -27,11 +27,11 @@ jobs:
             - name: Set output variable
               id: set_output
               run: |
-                if [ "${{ inputs.result }}" == "SI" ]; then
-                  echo "build_status=success" >> $GITHUB_OUTPUT
+                if [[ "${{ inputs.result }}" == "SI" ]]; then
+                echo "build_status=success" >> $GITHUB_OUTPUT
                 else
-                  echo "build_status=fail" >> $GITHUB_OUTPUT
-                fi
+                echo "build_status=fail" >> $GITHUB_OUTPUT
+              
 
     deploy:
         runs-on: ubuntu-latest
