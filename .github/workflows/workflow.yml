@@ -27,7 +27,7 @@ jobs:
             - name: Set output variable
               id: set_output
               run: |
-                if [[ "${{ inputs.result }}" == SI ]]; then
+                if [[ "${{ inputs.result }}" == "SI" ]]; then
                 echo "build_status=success" >> $GITHUB_OUTPUT
                 else
                 echo "build_status=fail" >> $GITHUB_OUTPUT
